@@ -93,7 +93,7 @@ vents.lock()
 boss_chamber.lock()
 escape_hatch.lock()
 
-current_room = entrance_chamber
+current_room = security_room
 inventory = []
 
 while alive == True:
@@ -217,7 +217,7 @@ while alive == True:
             current_room.set_item(sword)
             boss_chamber.unlock()
         elif password != '863':
-            alive = False
+            print('The screen flashes red, diplaying text that reads "Access Denied"')
     elif command == 'help':
         print('Commands: north, south, east, west, talk, grab, use, fight, (only in security room - password), (only in boss - fire, water, earth)')
     else:
